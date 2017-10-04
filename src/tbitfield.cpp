@@ -11,6 +11,9 @@
 
 TBitField::TBitField(int len)
 {
+	if (len<0)
+		throw "Error";
+
 }
 
 TBitField::TBitField(const TBitField &bf) // конструктор копирования
@@ -40,6 +43,8 @@ int TBitField::GetLength(void) const // получить длину (к-во б�
 
 void TBitField::SetBit(const int n) // установить бит
 {
+	if (n<0)
+		throw "Error";
 }
 
 void TBitField::ClrBit(const int n) // очистить бит
